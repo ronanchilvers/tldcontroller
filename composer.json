@@ -1,0 +1,20 @@
+{
+    "name": "ronan/slim",
+    "require": {
+        "slim/slim": "2.4.*",
+        "j4mie/idiorm": "1.4.*",
+        "slimcontroller/slimcontroller": "dev-master"
+    },
+    "autoload": {
+            "psr-0": {
+                "app": "./",
+                "TLD": "lib"
+            }
+        },
+    "authors": [
+        {
+            "name": "Ronan Chilvers",
+            "email": "ronan@thelittledot.com"
+        }
+    ]
+}
