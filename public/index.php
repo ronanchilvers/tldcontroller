@@ -6,7 +6,7 @@ $app = new \SlimController\Slim(include(APP_PATH . '/config/config.php'));
 
 $app->addRoutes(array(
     '/'                 => 'Index\Controller:index',
-    '/hello/:name'      => 'Hello\Controller:index'
+    '/hello(/:name)'      => 'Hello\Controller:index'
 ));
 
 $app->run();
