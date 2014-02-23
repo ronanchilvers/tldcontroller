@@ -12,9 +12,12 @@ class Controller extends \TLD\Controller
 
     public function indexAction()
     {
-        $this->render('index', array(
-                'date' => date('Y-m-d')
-            ));
+        $this->render('index');
+    }
+
+    public function aboutAction()
+    {
+        $this->render('about');
     }
 
     public function helloAction($name)
