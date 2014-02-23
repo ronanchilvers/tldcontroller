@@ -3,8 +3,54 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "5da92730f0a15d76af431408cd39bb87",
+    "hash": "352ebe9a0d8039aea9d32b565128a5f4",
     "packages": [
+        {
+            "name": "entomb/slim-json-api",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/entomb/slim-json-api.git",
+                "reference": "b92554ecf2bcd7bf65c711052af8133c2f21ffe0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/entomb/slim-json-api/zipball/b92554ecf2bcd7bf65c711052af8133c2f21ffe0",
+                "reference": "b92554ecf2bcd7bf65c711052af8133c2f21ffe0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "jsonAPI/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL 3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Tavares",
+                    "email": "the.entomb@gmail.com",
+                    "homepage": "https://github.com/entomb",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Slim extension to implement fast JSON API's",
+            "homepage": "https://github.com/entomb/slim-json-api",
+            "keywords": [
+                "api",
+                "json",
+                "middleware",
+                "slim",
+                "view"
+            ],
+            "time": "2013-12-11 15:00:12"
+        },
         {
             "name": "j4mie/idiorm",
             "version": "v1.4.1",
@@ -165,7 +211,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "slimcontroller/slimcontroller": 20
+        "slimcontroller/slimcontroller": 20,
+        "entomb/slim-json-api": 20
     },
     "platform": [
 

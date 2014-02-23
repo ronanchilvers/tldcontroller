@@ -3,7 +3,8 @@
     "require": {
         "slim/slim": "2.4.*",
         "j4mie/idiorm": "1.4.*",
-        "slimcontroller/slimcontroller": "dev-master"
+        "slimcontroller/slimcontroller": "dev-master",
+        "entomb/slim-json-api": "dev-master"
     },
     "autoload": {
             "psr-0": {
