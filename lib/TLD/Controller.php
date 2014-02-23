@@ -10,7 +10,15 @@ class Controller extends \SlimController\SlimController
      * @var string
      * @access protected
      */
-    protected $_viewClass = null;
+    protected $_viewClass = '\TLD\View\Standard';
+
+    /**
+     * Layouts that this controller should use
+     *
+     * @var array
+     * @access protected
+     */
+    protected $_layouts = array();
 
     /**
      * Renders output with given template
@@ -24,6 +32,13 @@ class Controller extends \SlimController\SlimController
         $reflection     = new \ReflectionClass(get_called_class());
         $templatePath   = str_replace('\\', '/', $templatePath . '/' . $reflection->getNamespaceName()) . '/views';
         $this->app->view($this->_viewClass)->setTemplatesDirectory($templatePath);
+
+        if ($this->app->view() instanceof View\Standard)
+        {
+            $this->app->view()->setLayoutDirectory($this->app->config('layouts.path'));
+            $this->app->view()->setLayouts($this->_layouts);
+        }
+
         parent::render($template, $args);
     }
 
