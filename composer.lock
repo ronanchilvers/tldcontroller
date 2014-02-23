@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "352ebe9a0d8039aea9d32b565128a5f4",
+    "hash": "f5ad507279f6fc6c59e2f6e825aa7cfa",
     "packages": [
         {
             "name": "entomb/slim-json-api",
@@ -157,16 +157,16 @@
         },
         {
             "name": "slimcontroller/slimcontroller",
-            "version": "dev-master",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fortrabbit/slimcontroller.git",
-                "reference": "96f9a762e02e10ba5fb4e68f0bfcd6f60269bbe3"
+                "reference": "a87bbfc2602a1a47753af4da17ca7bb145d8ef58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fortrabbit/slimcontroller/zipball/96f9a762e02e10ba5fb4e68f0bfcd6f60269bbe3",
-                "reference": "96f9a762e02e10ba5fb4e68f0bfcd6f60269bbe3",
+                "url": "https://api.github.com/repos/fortrabbit/slimcontroller/zipball/a87bbfc2602a1a47753af4da17ca7bb145d8ef58",
+                "reference": "a87bbfc2602a1a47753af4da17ca7bb145d8ef58",
                 "shasum": ""
             },
             "require": {
@@ -200,7 +200,7 @@
                 "controller",
                 "microframework"
             ],
-            "time": "2014-02-01 19:54:33"
+            "time": "2014-02-01 20:02:19"
         }
     ],
     "packages-dev": [
@@ -214,9 +214,9 @@
         "slimcontroller/slimcontroller": 20,
         "entomb/slim-json-api": 20
     },
-    "platform": [
-
-    ],
+    "platform": {
+        "php": ">=5.3"
+    },
     "platform-dev": [
 
     ]

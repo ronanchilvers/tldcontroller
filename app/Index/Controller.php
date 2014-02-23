@@ -12,18 +12,10 @@ class Controller extends \TLD\Controller
 
     public function indexAction()
     {
-        $this->render('index');
+        $this->view()->name = "Ronan";
     }
 
     public function aboutAction()
-    {
-        $this->render('about');
-    }
+    {}
 
-    public function helloAction($name)
-    {
-        $this->render('hello', array(
-                'name' => $name
-            ));
-    }
 }

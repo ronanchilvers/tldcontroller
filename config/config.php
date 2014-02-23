@@ -20,4 +20,9 @@ return array(
     // Version to broadcast is API responses
     'api.version'                   => 0.1,
 
+    // ORM parameters
+    'orm.dsn'           => 'mysql:host=localhost;dbname=slim',
+    'orm.username'      => 'dev',
+    'orm.password'      => 'dev'
+
 );

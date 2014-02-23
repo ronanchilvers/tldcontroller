@@ -2,7 +2,7 @@
 
 namespace TLD\View;
 
-class Json extends \Slim\View
+class Json extends \TLD\View
 {
     public function render($status)
     {

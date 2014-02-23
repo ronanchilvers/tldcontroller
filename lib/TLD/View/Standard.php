@@ -2,7 +2,7 @@
 
 namespace TLD\View;
 
-class Standard extends \Slim\View
+class Standard extends \TLD\View
 {
     /**
      * The directory where layout templates are stored

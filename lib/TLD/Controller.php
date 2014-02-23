@@ -21,6 +21,47 @@ class Controller extends \SlimController\SlimController
     protected $_layouts = array();
 
     /**
+     * Whether to auto-render the actions after dispatch
+     *
+     * By default, all actions are sent through the dispatch() method
+     * and are automatically rendered based on their method name. This
+     * property allows this to be turned off per controller.
+     *
+     * @var boolean
+     * @access protected
+     */
+    protected $_autoRender = true;
+
+    /**
+     * Dispatch method to run an action and automatically
+     * render the template afterwards
+     *
+     * @var mixed
+     * @access public
+     * @return void
+     */
+    public function dispatch()
+    {
+        $args = func_get_args();
+        $methodName = array_shift($args);
+
+        call_user_func_array(array($this, $methodName), $args);
+
+        if (true === $this->_autoRender)
+        {
+            $templateName = $methodName;
+            $methodSuffix = $this->app->config('controller.method_suffix');
+            if (empty($methodSuffix))
+            {
+                // Hack!! Copied from SlimController\Slim
+                $methodSuffix = 'Action';
+            }
+            $templateName = str_replace($methodSuffix, '', $templateName);
+            $this->render($templateName);
+        }
+    }
+
+    /**
      * Renders output with given template
      *
      * @param string $template Name of the template to be rendererd
@@ -42,4 +83,14 @@ class Controller extends \SlimController\SlimController
         parent::render($template, $args);
     }
 
+    /**
+     * Get the current app view
+     *
+     * @return \Slim\View
+     * @access public
+     */
+    public function view()
+    {
+        return $this->app->view();
+    }
 }

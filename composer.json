@@ -1,9 +1,10 @@
 {
     "name": "ronan/slim",
     "require": {
+        "php": ">=5.3",
         "slim/slim": "2.4.*",
         "j4mie/idiorm": "1.4.*",
-        "slimcontroller/slimcontroller": "dev-master",
+        "slimcontroller/slimcontroller": "dev-develop",
         "entomb/slim-json-api": "dev-master"
     },
     "autoload": {
